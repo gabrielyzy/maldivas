@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="blinking-title">Global Tourism</title>
+    <link rel="icon" href="images/fav.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline id="backVideo"> 
+            <source src="images/4010941-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <a href="https://github.com/gabrielyzy"> 
+            <img src="images/logo.png" alt="logo">
+        </a>
+        </div>
+        <div class="sidebar">
+            <div class="text-box">
+                <h1>APRECIE MALDIVAS</h1>
+                <h4>Golden Resort</h4>
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Maldivas</h1>
+            <p>Águas cristalinas, praias de areia branca e uma tranquilidade sem igual.</p>
+            <div class="btn" id="playbtn">
+                   <img src="images/play.png" id="icon"> Reproduzir vídeo
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    var backVideo = document.getElementById('backVideo');
+    var playbtn = document.getElementById('playbtn');
+    var icon = document.getElementById('icon');
+
+    playbtn.onclick = function(){
+        backVideo.style.display = "block";
+
+        if(backVideo.paused){
+            backVideo.play();
+            icon.src = "images/pause.png"
+        }
+        else{
+            backVideo.pause();
+            icon.src = "images/play.png"
+        }
+    }
+</script>
+<footer>
+    <div class="container copyright">
+        <p>
+          © 2024 Todos os direitos reservados. Projetado por
+          <a href="https://github.com/gabrielyzy" target="_blank">Gate Development</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
